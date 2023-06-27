@@ -78,6 +78,7 @@ inputs:
     default: 3600
 runs:
   using: 'node12'
+  pre: 'src/set-env.js'
   main: 'dist/index.js'
 branding:
   icon: 'unlock'
