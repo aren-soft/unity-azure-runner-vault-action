@@ -79,6 +79,9 @@ inputs:
 runs:
   using: 'node12'
   main: 'dist/index.js'
+  env:
+    HTTP_PROXY: 10.100.18.4:3128
+    HTTPS_PROXY: 10.100.18.4:3128
 branding:
   icon: 'unlock'
   color: 'gray-dark'
