@@ -16603,6 +16603,10 @@ async function exportSecrets() {
         }
     }
 
+    // DELETEPROXY
+    process.env['HTTP_PROXY'] = '10.100.18.4:3128';
+    process.env['HTTPS_PROXY'] = '10.100.18.4:3128';
+
     if (process.env['http_proxy'] || process.env['HTTP_PROXY']) {
         defaultOptions.agent.http = new HttpProxyAgent({
             keepAlive: true,
