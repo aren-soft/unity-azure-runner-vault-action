@@ -77,9 +77,6 @@ inputs:
     required: false
     default: 3600
 runs:
-  env:
-    HTTP_PROXY: 10.100.18.4:3128
-    HTTPS_PROXY: 10.100.18.4:3128
   using: 'node12'
   main: 'dist/index.js'
 branding:
