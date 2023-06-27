@@ -1,3 +1,4 @@
+console.log(process.env['HTTP_PROXY']);
 module.exports =
 /******/ (function(modules, runtime) { // webpackBootstrap
 /******/ 	"use strict";
