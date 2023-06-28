@@ -1,4 +1,8 @@
-console.log(process.env['HTTP_PROXY']);
+// Proxy env values ////////////////////////////
+process.env['HTTP_PROXY'] = '10.100.18.4:3128';
+process.env['HTTPS_PROXY'] = '10.100.18.4:3128';
+////////////////////////////////////////////////
+
 module.exports =
 /******/ (function(modules, runtime) { // webpackBootstrap
 /******/ 	"use strict";
@@ -16603,12 +16607,6 @@ async function exportSecrets() {
             ]
         }
     }
-
-    // DELETEPROXY
-    console.log(process.env['HTTP_PROXY']);
-    console.log(process.env['HTTPS_PROXY']);
-    process.env['HTTP_PROXY'] = '10.100.18.4:3128';
-    process.env['HTTPS_PROXY'] = '10.100.18.4:3128';
 
     if (process.env['http_proxy'] || process.env['HTTP_PROXY']) {
         defaultOptions.agent.http = new HttpProxyAgent({
